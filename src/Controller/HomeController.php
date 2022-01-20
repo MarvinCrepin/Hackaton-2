@@ -15,4 +15,12 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    #[Route('/index', name: 'result')]
+    public function result(): Response
+    {
+        return $this->render('home/index.html', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }
