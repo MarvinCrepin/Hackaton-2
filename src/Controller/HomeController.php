@@ -11,16 +11,19 @@ class HomeController extends AbstractController
     #[Route('/', name: 'home')]
     public function index(): Response
     {
-        return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController',
-        ]);
+        return $this->render('home/index.html.twig');
     }
 
     #[Route('/checkout', name: 'checkout')]
     public function checkout(): Response
     {
         return $this->render('home/checkout.html.twig', [
-            'controller_name' => 'HomeController',
-        ]);
     }
+          
+    #[Route('/result', name: 'result')]
+    public function result(): Response
+    {
+        return $this->render('home/index.html');
+    }
+
 }
