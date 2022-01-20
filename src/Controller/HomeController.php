@@ -17,7 +17,7 @@ class HomeController extends AbstractController
     #[Route('/checkout', name: 'checkout')]
     public function checkout(): Response
     {
-        return $this->render('home/checkout.html.twig', [
+        return $this->render('home/checkout.html.twig');
     }
           
     #[Route('/result', name: 'result')]
