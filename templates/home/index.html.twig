@@ -3,6 +3,12 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
+<script> function insertText()
+{
+  let text = document.getElementById('text').value;
+  let elem = document.getElementById('outils');
+  elem.append(text);
+}</script>
         <title>ManoMano On Deamnd</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -184,6 +190,27 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() {
+    var availableTags = [
+      "Marteau",
+      "Tournevis cruciforme",
+      "Ampoules",
+      "Vis",
+      "Scie",
+      "Scie à métaux",
+    ];
+    $( "#text" ).autocomplete({
+      source: availableTags
+    });
+  });
+  </script>
+</head>
+<body>
     </body>
 </html>
 

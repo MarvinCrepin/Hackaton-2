@@ -20,7 +20,7 @@ class HomeController extends AbstractController
         return $this->render('home/checkout.html.twig');
     }
           
-    #[Route('/trundle', name: 'result')]
+    #[Route('/result', name: 'result')]
     public function result(): Response
     {
         return $this->render('home/result.html.twig');
