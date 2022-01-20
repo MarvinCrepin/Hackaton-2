@@ -11,6 +11,7 @@ body {
         font-size: 1.5rem;
 }
 
+<<<<<<< HEAD
 * {
     box-sizing: border-box;
 }
@@ -679,4 +680,15 @@ body {
     opacity: 0;
     transform: translateX(-10px) rotate(45deg);
     pointer-events: none;
+=======
+.header {
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #36A0FF;
+>>>>>>> 1f8a31c (added form on home)
 }
