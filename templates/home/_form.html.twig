@@ -1,3 +1,10 @@
+<script> function insertText()
+    {
+      let text = document.getElementById('text').value;
+      text += " ";
+      let elem = document.getElementById('results');
+       elem.innerHTML += "<h3>" + text "</h3>";
+    }</script>
         <main class="flex-shrink-0">
             <!-- Page content-->
             <section class="py-5">
@@ -55,7 +62,22 @@
                                         <input class="form-control" id="pricemax" type="number" placeholder="1000€" data-sb-validations="required" />
                                         <label for="pricemax">Prix maximum</label>
                                     </div>
-                                    <!-- Message input-->
+                                    <div class="form-floating mb-3">
+                                    <input class="form-control" id="pricemax" type="number" placeholder="2 personnes" data-sb-validations="required" />
+                                    <label for="pricemax">Nombre de personnes travaillant sur le projet</label>
+                                    </div>
+                            <div class="form-floating mb-3">
+                            <select class="form-control" id="exp" type="text" placeholder="Entrer une pièce" data-sb-validations="required" />
+                        <option selected> Choisissez votre niveau d'expérience</option>
+                    <option> Débutant (ne bricole pas) </option>
+                    <option> Intermédiaire (occasionnel) </option>
+                    <option> Confirmé (plusieurs réussites à votre actif) </option>
+                    <option> Professionnel </option>    
+                    </select>
+                            <label for="exp">Expérience</label>
+                            <div class="invalid-feedback" data-sb-feedback="space:required">Une pièce est requise</div>
+                        </div>
+                            <!-- Message input-->
                                     <div class="mb-3">
                                     <label for="exampleFormControlSelect2">Possedez-vous déjà des outils ?</label>
                                     <input class="form-control" id="text" onfocus="this.value=''" type="text" placeholder="Marteau.." data-sb-validations="required" />
@@ -63,6 +85,8 @@
                                     <a onclick="insertText()" style="margin-top: 1rem" class="btn btn-primary">Ajouter un outil</a>
                                     <div id="outils" class="mb-3">
                                     <h6 style="margin-top:1.2rem"> Liste des outils ajoutés : </h6>
+                                    <div id="results" style="display: inline">
+                                    </div>
                                     </div>
                                     <!-- Submit success message-->
                                     <!---->
